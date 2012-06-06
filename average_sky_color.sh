@@ -6,7 +6,7 @@ wget 'http://media.lintvnews.com/BTI/KXAN02.jpg?1338982842187' \
   -o /tmp/sky.log
 mogrify -crop 800x225+0+0 /tmp/sky.jpg
 read red blue green <<< $(convert /tmp/sky.jpg \
-  -modulate 100,200,100 \
+  -modulate 100,250,110 \
   -scale 1x1\! \
   -format '%[fx:int(255*r+.5)] %[fx:int(255*g+.5)] %[fx:int(255*b+.5)]' \
   info:- )
