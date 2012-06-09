@@ -17,24 +17,34 @@ convert $(dirname $0)/StripesBW.png \
 sync
 cat>/tmp/background.xml<<EOF
 <background>
-  <starttime>
-    <hour>$(date +%H)</hour>
-    <minute>$(date +%M)</minute>
-    <second>$(date +%S)</second>
-  </starttime>
-  <static>
-    <duration>1.0</duration>
-    <file>/tmp/sky_stripes_old.png</file>
-  </static>
-  <transition>
-    <duration>600.0</duration>
-    <from>/tmp/sky_stripes_old.png</from>
-    <to>/tmp/sky_stripes.png</to>
-  </transition>
-  <static>
-    <duration>3600.0</duration>
-    <file>/tmp/sky_stripes.png</file>
-  </static>
+<starttime>
+<hour>$(date +%H)</hour>
+<minute>$(date +%M)</minute>
+<second>$(date +%S)</second>
+</starttime>
+
+<static>
+<duration>10.0</duration>
+<file>/tmp/sky_stripes_old.png</file>
+</static>
+
+<transition type="overlay">
+<duration>590.0</duration>
+<from>/tmp/sky_stripes_old.png</from>
+<to>/tmp/sky_stripes.png</to>
+</transition>
+
+<static>
+<duration>3600.0</duration>
+<file>/tmp/sky_stripes.png</file>
+</static>
+
+<transition type="overlay">
+<duration>600.0</duration>
+<from>/tmp/sky_stripes.png</from>
+<to>/tmp/sky_stripes.png</to>
+</transition>
+
 </background>
 EOF
 # Run this in cron, activate the background using:
