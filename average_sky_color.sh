@@ -14,7 +14,7 @@ convert $(dirname $0)/StripesBW.png \
   -fill "rgb($red,$blue,$green)" \
   -colorize 70% \
   /tmp/sky_stripes.png 
-
+sync
 cat>/tmp/background.xml<<EOF
 <background>
   <starttime>
@@ -32,7 +32,7 @@ cat>/tmp/background.xml<<EOF
     <to>/tmp/sky_stripes.png</to>
   </transition>
   <static>
-    <duration>100000.0</duration>
+    <duration>3600.0</duration>
     <file>/tmp/sky_stripes.png</file>
   </static>
 </background>
