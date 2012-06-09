@@ -6,7 +6,7 @@ wget http://12.52.91.101/axis-cgi/jpg/image.cgi \
   -o /tmp/sky.log
 mogrify -crop 280x200+0+0 /tmp/sky.jpg
 read red blue green <<< $(convert /tmp/sky.jpg \
-  -modulate 100,250,100 \
+  -modulate 100,200,100 \
   -scale 1x1\! \
   -format '%[fx:int(255*r+.5)] %[fx:int(255*g+.5)] %[fx:int(255*b+.5)]' \
   info:- )
