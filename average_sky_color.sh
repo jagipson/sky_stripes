@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cp /tmp/sky_stripes{,_old}.png
+cp /tmp/sky_stripes.png "/tmp/sky_stripes_$(date +%H%M).png"
 wget http://12.52.91.101/axis-cgi/jpg/image.cgi \
   -O /tmp/sky.jpg \
   -o /tmp/sky.log
