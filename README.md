@@ -1,3 +1,7 @@
+# DEPRECATED
+
+## No, seriously.  This shit's old.
+
 sky_stripes
 ===========
 
