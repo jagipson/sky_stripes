@@ -19,3 +19,4 @@ The shell script does the following:
 * Creates a Gnome background XML file to gradually transition the previous
   background to the new one.
 * Tells Gnome to use the new XML file and images
+* Blows up your CPU
