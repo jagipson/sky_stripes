@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# FIXME: QUOTE EVERY FUCKING EXPANSION
 cp /tmp/sky_stripes{,_old}.png
 wget http://12.52.91.101/axis-cgi/jpg/image.cgi \
   -O /tmp/sky.jpg \
