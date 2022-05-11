@@ -1,3 +1,5 @@
+# DEPRECATED
+
 sky_stripes
 ===========
 
